@@ -1,0 +1,18 @@
+### Probar servidor
+GET http://localhost:8080/
+
+### Crear un tweet por ID de usuario
+POST http://localhost:8080/users/2/tweets
+Content-Type: application/json
+
+{
+    "tweeter_id": "3",
+    "message":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s", 
+    "time_stamp": "2021-09-25 22:32:31"
+}
+
+### Seguir un usuario idA -> idB
+POST http://localhost:8080/users/0/follows/2
+
+### Timeline por ID del usuario
+GET http://localhost:8080/users/0/follows/tweets

@@ -1,0 +1,14 @@
+Planificacion de endpoints
+tweets
+    Crear: POST users/{user_id}/tweets/
+    Leer tweettes de la persona con ID x: GET users/{user_id}/tweets/
+follows
+    Seguir: POST users/{user_id_A}/follows/{user_id_B}
+timeline
+    timeline de la persona con ID x: GET users/{user_id}/follows/tweets
+
+docker run --name mysql_proy1_arq -e MYSQL_ROOT_PASSWORD=123456 -d -p 3333:3306 mysql:5.7
+docker run -d -p 6379:6379 --name cache_proy1 redis
+
+docker build -t img_proy1 .
+docker run -it -p 8070:8080 img_proy1 node index.js
